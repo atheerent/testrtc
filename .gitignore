@@ -1,0 +1,5 @@
+*.pyc
+browsers*
+components
+firefox*
+node_modules

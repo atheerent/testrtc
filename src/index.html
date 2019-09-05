@@ -1,0 +1,115 @@
+<!--
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="keywords" content="WebRTC, HTML5, JavaScript" />
+  <meta name="description" content="Client-side WebRTC code samples." />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <base target="_blank">
+  <title>Atheer Setup Assessment</title>
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48530561-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script src="../node_modules/webrtc-adapter/out/adapter.js"></script>
+  <script src="../components/webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="ui/testrtc-main.html">
+
+  <link rel="stylesheet" href="css/atheer.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+</head>
+<body unresolved style="margin: 0px">
+  <div id="atheer-header">
+    <a id="header-home" class="navbar-brand text-lt w-xxs bg-logo" tabindex="0">
+      <img src="images/Atheer-Logo.png" style="box-sizing: border-box; display: inline; max-height: 40px; vertical-align: middle;" alt="Atheer Logo">
+    </a>
+    <span class="p-l-sm">
+      <h1 class="m-n font-thin h3 text-xxl ng-binding">Atheer Setup Assessment</h1>
+    </span>
+  </div>
+  <div style="background-color: #76BC9E; box-shadow: 0 3px 5px rgba(0,0,0,.26); height: 4px">
+  </div>
+
+  <testrtc-main></testrtc-main>
+
+  <!-- Placeholder for dynamically generated test suites. -->
+  <div id="content" class="main"></div>
+
+  <div style="max-width: 40em; margin: auto auto;">
+    <div style="width: 100%">
+      <form>
+        <input id="full_name" type="text" name="full_name" placeholder="Full Name" style="width:49%; height: 30px; line-height: 26px; border-width: 0 0 1px; font-family: Roboto; font-weight: 400; font-size: 14px; color: #606161!important; -webkit-appearance: none; border-color: black;" required />
+        <input id="email" type="text" name="email" placeholder="Email" style="width:49%; height: 30px; line-height: 26px; border-width: 0 0 1px; font-family: Roboto; font-weight: 400; font-size: 14px; color: #606161!important; -webkit-appearance: none; border-color: black;" required />
+      </form>
+      <paper-button id="send_report" on-tap="run" raised="" onclick="send_report(document.getElementById('full_name').value, document.getElementById('email').value, report.generate('Atheer Setup Assessment'));" style="float:right; background-color: #76BC9E; border-radius: 0px; box-shadow: none; color: #ffffff; max-width: 13em;" class="access-btn btn-green ng-scope flex">SEND REPORT</paper-button>
+      <br clear=all />
+    </div>
+  </div>
+
+  <footer>
+    <span><a href="//www.google.com/accounts/TOS">Terms</a></span>
+    <span><a href="//www.google.com/policies/privacy/">Privacy</a></span>
+  </footer>
+
+  <script src="testrtc-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/call.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/ssim.js"></script>
+  <script src="js/videoframechecker.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/bandwidthcall.js"></script>
+  <script src="js/testcasename.js"></script>
+  <script src="js/testsuitename.js"></script>
+  <script src="js/ConnectionVariable.js"></script>
+
+  <!-- Add tests after this line. -->
+  <script src="js/analyticstest.js"></script>
+  <script src="js/apitest.js"></script>
+  <script src="js/storagetest.js"></script>
+  <script src="js/videotest.js"></script>
+  <script src="js/xmpptest.js"></script>
+
+  <script src="js/mictest.js"></script>
+  <script src="js/camresolutionstest.js"></script>
+  <script src="js/bandwidthtest.js"></script>
+
+  <script>
+    function send_report(name, email, report) {
+      fetch(apiUrl + '/connectionreport', {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_full_name: name,
+          email: email,
+          result: { contents: report, server:env, version: '1.0' }
+        }),
+      });
+      document.getElementById('send_report').disabled = true;
+      document.getElementById('send_report').innerHTML = 'SUBMITTED';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#topBar {
+    padding: 0px!important;
+    margin-top: 10px!important;
+}
+
+.header.testrtc-suite {
+    height: 2.5em !important;
+}
+
+#atheer-header {
+    background-color: #065373;
+    min-height: 50px;
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+.p-l-sm {
+    padding-left: 20px!important;
+}
+
+.md-toolbar-tools {
+    font-size: 20px;
+    letter-spacing: .005em;
+    box-sizing: border-box;
+    font-weight: 400;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    height: 64px;
+    max-height: 64px;
+    padding: 0 16px;
+    margin: 0;
+}
+
+.text-xxl {
+    font-size: 24px!important;
+}
+.font-thin {
+    font-weight: 300!important;
+}
+.m-n {
+    margin: 0!important;
+}
+
+
+.ribbon {
+    font-family: 'DINNextLT-Light';
+    font-size: 16px !important;
+    position: absolute;
+    background: #FF6367;
+    color: #fff;
+    text-align: center;
+    padding: 5px 2em;
+    right:-16px;
+    top: 20px;
+}
+.ribbon:before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    bottom: 0em;
+    border: 1em solid #FF6367;
+    border-left-color: transparent;
+    left: -2em;
+    z-index: 1;
+}
+.ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: rgba(255, 99, 105, 0.37) transparent transparent transparent;
+    bottom: -1em;
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
+.input-sign-in{
+    font-family: 'DINNextLT-Light';
+    height: 29px;
+    border-color: #908F8F;
+    color: white;
+    background-color: transparent;
+}
+
+.input-sign-in::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-family: 'DINNextLT-Light';
+    color:   #908F8F;
+    font-size: 11px;
+}
+.input-sign-in:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family: 'DINNextLT-Light';
+    color:   #908F8F;
+    font-size: 11px;
+    opacity:  1;
+}
+.input-sign-in::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: 'DINNextLT-Light';
+    color:   #908F8F;
+    font-size: 11px;
+    opacity:  1;
+}
+.input-sign-in:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: 'DINNextLT-Light';
+    color:   #908F8F;
+    font-size: 11px;
+}
+
+.forgot-password{
+    font-family: 'DINNextLT-Light';
+    color: var(--white) !important;
+    font-size: 12px !important;
+}
+
+.btn-sign-in {
+    height: 29px;
+    width: 100px;
+    font-family: 'DINNextLT-Light';
+    font-size: 12px;
+    background-color: #0A89BD;
+    color: var(--white);
+    border: 0px;
+    margin-bottom: 21px;
+    line-height: 2.2;
+}
+
+.btn-sign-in-azure {
+    height: 29px;
+    width: 100px;
+    font-family: 'DINNextLT-Light';
+    font-size: 12px;
+    background-color: #EB3C00;
+    color: var(--white);
+    border: 0px;
+    margin-bottom: 21px;
+    line-height: 2.2;
+}
+
+.access-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+.access-container main {
+    flex: 1;
+    background-color: #268383;
+    background-image: -webkit-linear-gradient(left, #75b89a, #268383);
+    background-image: linear-gradient(to right, #75b89a, #268383);
+    /*background: linear-gradient(-269deg, #268484 0%, #439E91 34%, #7CD1AB 100%);*/
+}
+
+.access-container footer {
+    height: 50px;
+    background-color: #262524;
+    font-family: 'DINNextLT-Light';
+    text-align: center;
+    font-size: 8pt;
+    display:table;
+    width: 100%;
+    color: #908F8F;
+}
+
+.access-container footer span{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.access-container main .header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+}
+
+@media (max-width: 599px) {
+    .access-container .btn {
+        height: 36px;
+        font-family: 'DINNextLT-Regular';
+        font-size: 11px;
+        color: #fff;
+        position: absolute;
+        right: 10px;
+        bottom: 30px;
+    }
+}
+
+@media (min-width: 600px) {
+    .access-container .btn {
+        height: 36px;
+        width: 121px;
+        font-family: 'DINNextLT-Regular';
+        font-size: 11px;
+        color: #fff;
+        position: absolute;
+        right: 10px;
+        bottom: 30px;
+    }
+}
+
+.access-container  .body-box-btn {
+    background-color: #045474;
+    border: 0px;
+}
+
+.access-container .body-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    bottom: 16px !important;
+}
+
+.header-container .header {
+    margin: 0 auto !important;
+    max-width: 1110px !important;
+    width: 100%;
+}
+
+.access-container main .body-container{
+    margin: 0 auto !important;
+    max-width: 1110px !important;
+    margin-top: 15px !important;
+}
+
+.body-container .box{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    position:relative;
+}
+
+.body-container .box .box-heading{
+    font-family: 'DINNextLT-Light';
+    font-size: 18px;
+    color: #fff;
+    padding: 7px 0px 5px 20px;
+    background-color: #504B47;
+}
+
+.body-container .box .box-text{
+    font-family: 'DINNextLT-Regular';
+    font-size: 14px;
+    color: #fff;
+    padding: 15px 20px 5px 20px;
+}
+
+.navbar-brand img {
+    max-height: 30px;
+}
+
+.access-header{
+    background-color:#3A3A3A;
+    height:135px;
+}
+.access-footer{
+    background-color:#3A3A3A;
+    height:200px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .access-center {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 600px;
+        background-color: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+        border-radius: 2px;
+    }
+}
+
+@media (max-width: 599px) {
+    .access-center {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+        border-radius: 2px;
+    }
+}
+
+.access-btn {
+    height: 36px;
+    font-size: 13px;
+    line-height: 3.5;
+    text-align: center;
+    margin :5px;
+    font-weight: 400!important;
+}
+
+#startButton:focus {
+    font-weight: 400!important;
+}
+
+.access-btn.disabled,
+.access-btn[disabled],
+fieldset[disabled] .access-btn {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+a.access-btn.disabled,
+fieldset[disabled] a.btn {
+    pointer-events: none;
+}
+
+.access-btn.btn-azure {
+    width: 200px;
+    line-height: 3;
+    margin :5px;
+    background-color: #EB3C00;
+    color: var(--white);
+    border: 0px;
+}
+
+.btn-green , .btn-green:hover{
+    background-color: #76BC9E;
+    color: #fff;
+    border: 0px;
+}
+
+.btn-white , .btn-white:hover{
+    background-color: #fff;
+    color: #76BC9E;
+    border: 1px solid #76BC9E;
+}
+
+.access-form-title{
+    font-size: 30px;
+    color:#76BC9E;
+    font-family: 'DINNextLT-UltraLight';
+}
+
+.access-form-text{
+    font-size: 14px;
+    color:#4A4A4A;
+    font-family: 'DINNextLT-Regular';
+}
+
+.md-horizontal-rule {
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+.md-text {
+    font-family: 'Roboto' !important;
+    color: #606161;
+    font-weight: 400;
+    font-size: 14px !important;
+}

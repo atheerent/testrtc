@@ -1,0 +1,23 @@
+{
+  "lifetimeDuration": "86400s",
+  "iceServers": [
+    {
+      "urls": [
+        "stun:turn.atheerair.com:80",
+        "stun:aturn.atheerair.com:443"
+      ]
+    },
+    {
+      "urls": [
+        "turn:aturn.atheerair.com:443",
+        "turn:aturn2.atheerair.com:443?transport=tcp",
+        "turn:turn.atheerair.com:80",
+        "turn:turn2.atheerair.com:80?transport=tcp"
+      ],
+      "username": "gorst",
+      "credential": "hero"
+    }
+  ],
+  "blockStatus": "NOT_BLOCKED",
+  "iceTransportPolicy": "all"
+}

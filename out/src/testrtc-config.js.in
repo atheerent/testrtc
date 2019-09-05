@@ -1,0 +1,8 @@
+
+'use strict';
+
+var baseUrl = '/* @echo AIRAPI_URL */';
+
+var env = '/* @echo TESTRTC_ENV */';
+
+var apiUrl= baseUrl + 'api';
