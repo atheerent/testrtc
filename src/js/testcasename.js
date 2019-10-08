@@ -39,7 +39,6 @@ function TestCaseNames() {
     DOWNLOADSPEEDTEST: 'Download Speed Test',
     WEBSOCKETTEST: 'WS',
     VIDEOTEST: 'Video',
-    STORAGETEST: 'Storage',
     ANALYTICSTEST: 'Analytics',
     UPLINKTEST: 'Uplink',
     DOWNLINKTEST: 'Downlink',
